@@ -21,12 +21,12 @@ public class MovieController {
 	@Autowired
 	private MovieService service;
 
-	@GetMapping("/todos")
+	@GetMapping
 	public Page<MovieDTO> findAll(Pageable pageable) {
 		return service.findAll(pageable);
 	}
 
-	@GetMapping
+	@GetMapping(value = "/{id}")
 	public MovieDTO findByID(@PathVariable Long id) {
 		return service.findById(id);
 	}
