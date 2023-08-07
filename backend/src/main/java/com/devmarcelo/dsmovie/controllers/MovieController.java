@@ -30,10 +30,4 @@ public class MovieController {
 	public MovieDTO findByID(@PathVariable Long id) {
 		return service.findById(id);
 	}
-	@GetMapping("/oi")
-	public Map<String, String> teste(){
-		Map<String, String> map = new HashMap<>();
-		map.put("value","Hello World");
-		return map;
-	}
 }
